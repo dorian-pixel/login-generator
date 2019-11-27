@@ -41,4 +41,11 @@ public class LoginGeneratorTest {
         assertEquals(l2, loginService.findAllLoginsStartingWith("PDUR"));
     }
 
+
+    @Test
+    public void ct5(){
+        loginGen.generateLoginForNomAndPrenom("DU", "Paul");
+        List<String> l2 =  Arrays.asList("PDU");
+        assertEquals(l2, loginService.findAllLoginsStartingWith("PDU"));
+    }
 }
